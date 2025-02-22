@@ -1,58 +1,44 @@
-/* Reset and Centering */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+/* Full-screen black background */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  background-color: black;
+  background: black; /* Changed background to black */
   color: white;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Container */
-.container {
+/* Remove background image */
+.overlay {
+  display: none; /* No need for overlay if background is already black */
+}
+
+/* Content box */
+.content {
+  position: relative;
   max-width: 80%;
-  padding: 15px;
+  padding: 20px;
+  z-index: 2;
 }
 
 /* Welcome Text */
 .welcome-text {
-  font-size: 0rem; /* Smaller font */
+  font-size: 2.5rem;
   font-weight: bold;
-  opacity: 0;
-  transform: translateY(-10px);
   animation: fadeIn 2s ease-in-out forwards;
 }
 
 /* Subtext */
 .sub-text {
-  font-size: 1rem; /* Smaller font */
-  margin-top: 5px;
-  opacity: 0;
-  transform: translateY(5px);
-  animation: fadeIn 2s ease-in-out forwards 1s;
-}
-
-/* Call-to-Action Button */
-.cta-button {
-  display: inline-block;
+  font-size: 1.2rem;
   margin-top: 10px;
-  padding: 8px 16px;
-  font-size: 0.9rem; /* Smaller button text */
-  color: black;
-  background-color: #ffcc00;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease-in-out, transform 0.2s;
-}
-
-.cta-button:hover {
-  background-color: white;
-  transform: scale(1.05);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 2s ease-in-out forwards 1s;
 }
 
 /* Highlighted text */
@@ -61,14 +47,38 @@ html, body {
   font-weight: bold;
 }
 
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: black;
+  background-color: #ffcc00;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+/* Typing effect */
+.typing-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  display: inline-block;
+}
+
 /* Fade-in animation */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
