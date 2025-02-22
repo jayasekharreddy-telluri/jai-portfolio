@@ -1,6 +1,11 @@
 [build]
-command = "npm run build"
-publish = "dist/jai-portfolio/browser"
+  command = "npm run build"
+  publish = "dist/jai-portfolio/browser"
 
 [[plugins]]
-package = "@netlify/angular-runtime"
+  package = "@netlify/angular-runtime"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
