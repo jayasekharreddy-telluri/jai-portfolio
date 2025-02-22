@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Jai's Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="welcome-text">Welcome to My World 🌍</h1>
+        <p class="sub-text">Hi, I'm <span class="highlight">Jai</span> – A passionate Java developer 🚀</p>
+        <p class="typing-text"></p>
+        <a href="#projects" class="cta-button">Explore My Work Here</a>
+    </div>
+
+    <script>
+        // Typing effect for an engaging feel
+        const text = "I love coding, solving real-world problems, and building amazing things!";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.querySelector(".typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 50);
+            }
+        }
+        setTimeout(typeEffect, 1500);
+    </script>
+
+</body>
+</html>
