@@ -30,4 +30,18 @@ export class AppComponent {
   toggleMenu() {
     this.opened = !this.opened;
   }
+
+
+  ngOnInit() {
+    this.checkIfMobile();
+  }
+
+  checkIfMobile() {
+    const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+    if (isMobile) {
+      alert("For the best experience, please switch to desktop mode.");
+    }
+  }
+
+
 }
